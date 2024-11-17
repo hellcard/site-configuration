@@ -23,8 +23,8 @@ $ source .venv/bin/activate
 
 <h3 align="center">The following routes are available:</h3>
 <p align=center>'delivery/main/' - main page</p>
-<p align="center">'delivery/add' - add page</p>
-<p align="center">'delivery/delivery/<int:id>' - sorted deliveries</p>
+<p align="center">'delivery/add/' - add page</p>
+<p align="center">'delivery/delivery/int:id/' - sorted deliveries</p>
 
 <h3 align="center">admin pannel</h3>
 <p align="center">Login: admin</p>
