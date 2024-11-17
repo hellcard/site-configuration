@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} main page {% endblock %} :: delivery</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'delivery/style.css' %}">
+</head>
+<body>
+<header>
+    <h1>delivery</h1>
+</header>
+<nav>
+    <div>
+        <a href="{% url 'main' %}">main page</a>
+        <a href="{% url 'add' %}">add delivery</a>
+        {% for category in categories %}
+        <a href="{% url 'delivery' category.pk %}">{{ category.name }}</a>
+        {% endfor %}
+    </div>
+</nav>
+{% block content%}
+{% endblock %}
+</body>
+</html>
