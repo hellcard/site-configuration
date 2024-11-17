@@ -2,9 +2,14 @@
 
 {% block title %} deliveries - {{cur_del}} {% endblock %}
 
+{%block site %}{{ site_title }}{% endblock %}
+
 {% block content %} 
+
 <h2>Current delivery: {{cur_del}}</h2>
+
 {% for delivery in deliveries %}
+
 <div>
 <h4>{{ delivery.title }}</h4>
 <p><b>{{ delivery.category }}</b></p>
@@ -13,5 +18,7 @@
 <p>{{ delivery.datetime }}</p>
 <br>
 </div>
+
 {% endfor %}
+
 {% endblock %}

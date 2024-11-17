@@ -1,10 +1,16 @@
 {% extends 'basic/basic.html' %}
 {% block title %} add {% endblock %}
+
+{% block site %}{{ site_title }}{% endblock %}
+
 {% block content %}
+
 <h2>add delivery</h2>
+
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="add delivery">
 </form>
+
 {% endblock %}

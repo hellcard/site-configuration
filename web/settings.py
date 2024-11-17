@@ -23,9 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a#c=p13g-#l%#6cf_w)in0kpx5h&!lk0(do+*(5!a3lxc(ke%o'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+
+
+DEBUG = False # debug settings - False
+
+ALLOWED_HOSTS = ['127.0.0.1'] # 127.0.0.1:8000/delivery/main/ - main page
 
 
 # Application definition
@@ -74,8 +77,8 @@ WSGI_APPLICATION = 'web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
+DATABASES = { # using sqlite3
+    'default': { 
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -104,9 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us' # use english-american language
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Chicago' # use chicago timezone
 
 USE_I18N = True
 
@@ -122,3 +125,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#                                                             !! ---- added by hellcard ---- !! 
+
+SITE_TITLE = 'delivery website' # name website  |  if empty string or None -> SITE_TITLE = delivery  |  else -> string from SITE_TITLE
+

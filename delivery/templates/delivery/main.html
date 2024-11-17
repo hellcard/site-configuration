@@ -1,13 +1,22 @@
 {% extends "basic/basic.html" %}
+
+{% block site %}{{ site_title }}{% endblock %}
+
 {% block content %}
+
 {% for delivery in deliveries %}
+
 <div>
+
 <h4>{{ delivery.title }}</h4>
 <p><b>{{ delivery.category }}</b></p>
 <p>{{ delivery.description }}</p>
 <p>{{ delivery.price }}</p>
 <p>{{ delivery.datetime }}</p>
 <br>
+
 </div>
+
 {% endfor %}
+
 {% endblock %}
